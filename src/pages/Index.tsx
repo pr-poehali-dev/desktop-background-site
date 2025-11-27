@@ -12,26 +12,44 @@ interface Wallpaper {
   image: string;
 }
 
-const wallpapers: Wallpaper[] = [
-  { id: 1, title: 'Abstract Flow', category: 'Абстракция', tags: ['gradient', 'abstract', 'purple', 'blue'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/72fbae8b-4b9c-42ec-9adf-d52bdbd249a4.jpg' },
-  { id: 2, title: 'Liquid Gold', category: 'Абстракция', tags: ['liquid', 'gold', 'luxury', 'abstract'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/438dbcfa-92b5-4c79-8161-9a148ca50dea.jpg' },
-  { id: 3, title: 'Color Explosion', category: 'Абстракция', tags: ['colorful', 'vibrant', 'splash', 'creative'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/1f4a75e5-0bb0-477e-8abc-16796197e5df.jpg' },
-  { id: 4, title: 'Cosmic Nebula', category: 'Космос', tags: ['space', 'nebula', 'stars', 'cosmic'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/bbc96856-910c-45a1-89c6-0209bc7d03e4.jpg' },
-  { id: 5, title: 'Spiral Galaxy', category: 'Космос', tags: ['galaxy', 'purple', 'space', 'stars'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/219357af-574b-402e-9e15-854f1aca654f.jpg' },
-  { id: 6, title: 'Aurora Borealis', category: 'Космос', tags: ['aurora', 'northern lights', 'green', 'night'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/8ac70f7b-d71c-49ee-854a-947c47acdf03.jpg' },
-  { id: 7, title: 'Minimal Geometry', category: 'Минимализм', tags: ['minimal', 'geometric', 'neon', 'modern'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/62877985-cdf4-4ed0-aa59-f16e426a61ff.jpg' },
-  { id: 8, title: 'Minimal Waves', category: 'Минимализм', tags: ['waves', 'lines', 'simple', 'clean'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/79ecc7eb-48fe-4316-a7bc-27f2d6dcfbd3.jpg' },
-  { id: 9, title: 'Pastel Circles', category: 'Минимализм', tags: ['pastel', 'circles', 'soft', 'geometric'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/a435e377-5193-45fe-85db-4891a69ec2ad.jpg' },
-  { id: 10, title: 'Mountain Sunset', category: 'Природа', tags: ['mountain', 'sunset', 'landscape', 'nature'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/9192c3e1-bff0-451e-ba1b-b64828a92bff.jpg' },
-  { id: 11, title: 'Ocean Waves', category: 'Природа', tags: ['ocean', 'water', 'beach', 'tropical'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/2e6fd59a-461a-4bf8-bc90-847b01d11b00.jpg' },
-  { id: 12, title: 'Forest Path', category: 'Природа', tags: ['forest', 'trees', 'green', 'nature'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/e4b67796-33dc-4225-babb-ca3c79469ed6.jpg' },
-  { id: 13, title: 'Cherry Blossom', category: 'Природа', tags: ['sakura', 'pink', 'spring', 'flowers'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/df7dcd5c-db29-4e53-8783-6da436d8ceac.jpg' },
-  { id: 14, title: 'Tropical Waterfall', category: 'Природа', tags: ['waterfall', 'jungle', 'green', 'tropical'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/97d7acf8-0f0f-49d2-a546-92d6cff7fe27.jpg' },
-  { id: 15, title: 'Desert Dunes', category: 'Природа', tags: ['desert', 'sand', 'golden', 'minimal'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/e8fb718b-3d73-4606-9337-76a9743b382c.jpg' },
-  { id: 16, title: 'City Lights', category: 'Город', tags: ['city', 'night', 'neon', 'cyberpunk'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/a34921db-238c-42d4-a7d0-44f8ebfb2ad3.jpg' },
-  { id: 17, title: 'Modern Architecture', category: 'Город', tags: ['building', 'glass', 'modern', 'architecture'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/4a3a4476-0bab-4091-aa0d-db7388151971.jpg' },
-  { id: 18, title: 'Tokyo Streets', category: 'Город', tags: ['tokyo', 'neon', 'rain', 'urban'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/86250acc-6a8b-4fd4-b4e0-f8553b5f85d2.jpg' },
+const baseWallpapers = [
+  { title: 'Abstract Flow', category: 'Абстракция', tags: ['gradient', 'abstract', 'purple', 'blue'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/72fbae8b-4b9c-42ec-9adf-d52bdbd249a4.jpg' },
+  { title: 'Liquid Gold', category: 'Абстракция', tags: ['liquid', 'gold', 'luxury', 'abstract'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/438dbcfa-92b5-4c79-8161-9a148ca50dea.jpg' },
+  { title: 'Color Explosion', category: 'Абстракция', tags: ['colorful', 'vibrant', 'splash', 'creative'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/1f4a75e5-0bb0-477e-8abc-16796197e5df.jpg' },
+  { title: 'Cosmic Nebula', category: 'Космос', tags: ['space', 'nebula', 'stars', 'cosmic'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/bbc96856-910c-45a1-89c6-0209bc7d03e4.jpg' },
+  { title: 'Spiral Galaxy', category: 'Космос', tags: ['galaxy', 'purple', 'space', 'stars'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/219357af-574b-402e-9e15-854f1aca654f.jpg' },
+  { title: 'Aurora Borealis', category: 'Космос', tags: ['aurora', 'northern lights', 'green', 'night'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/8ac70f7b-d71c-49ee-854a-947c47acdf03.jpg' },
+  { title: 'Minimal Geometry', category: 'Минимализм', tags: ['minimal', 'geometric', 'neon', 'modern'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/62877985-cdf4-4ed0-aa59-f16e426a61ff.jpg' },
+  { title: 'Minimal Waves', category: 'Минимализм', tags: ['waves', 'lines', 'simple', 'clean'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/79ecc7eb-48fe-4316-a7bc-27f2d6dcfbd3.jpg' },
+  { title: 'Pastel Circles', category: 'Минимализм', tags: ['pastel', 'circles', 'soft', 'geometric'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/a435e377-5193-45fe-85db-4891a69ec2ad.jpg' },
+  { title: 'Mountain Sunset', category: 'Природа', tags: ['mountain', 'sunset', 'landscape', 'nature'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/9192c3e1-bff0-451e-ba1b-b64828a92bff.jpg' },
+  { title: 'Ocean Waves', category: 'Природа', tags: ['ocean', 'water', 'beach', 'tropical'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/2e6fd59a-461a-4bf8-bc90-847b01d11b00.jpg' },
+  { title: 'Forest Path', category: 'Природа', tags: ['forest', 'trees', 'green', 'nature'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/e4b67796-33dc-4225-babb-ca3c79469ed6.jpg' },
+  { title: 'Cherry Blossom', category: 'Природа', tags: ['sakura', 'pink', 'spring', 'flowers'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/df7dcd5c-db29-4e53-8783-6da436d8ceac.jpg' },
+  { title: 'Tropical Waterfall', category: 'Природа', tags: ['waterfall', 'jungle', 'green', 'tropical'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/97d7acf8-0f0f-49d2-a546-92d6cff7fe27.jpg' },
+  { title: 'Desert Dunes', category: 'Природа', tags: ['desert', 'sand', 'golden', 'minimal'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/e8fb718b-3d73-4606-9337-76a9743b382c.jpg' },
+  { title: 'City Lights', category: 'Город', tags: ['city', 'night', 'neon', 'cyberpunk'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/a34921db-238c-42d4-a7d0-44f8ebfb2ad3.jpg' },
+  { title: 'Modern Architecture', category: 'Город', tags: ['building', 'glass', 'modern', 'architecture'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/4a3a4476-0bab-4091-aa0d-db7388151971.jpg' },
+  { title: 'Tokyo Streets', category: 'Город', tags: ['tokyo', 'neon', 'rain', 'urban'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/86250acc-6a8b-4fd4-b4e0-f8553b5f85d2.jpg' },
 ];
+
+const generateWallpapers = (count: number): Wallpaper[] => {
+  const result: Wallpaper[] = [];
+  for (let i = 0; i < count; i++) {
+    const base = baseWallpapers[i % baseWallpapers.length];
+    const variation = Math.floor(i / baseWallpapers.length) + 1;
+    result.push({
+      id: i + 1,
+      title: variation > 1 ? `${base.title} ${variation}` : base.title,
+      category: base.category,
+      tags: base.tags,
+      image: base.image
+    });
+  }
+  return result;
+};
+
+const wallpapers: Wallpaper[] = generateWallpapers(100);
 
 const categories = ['Все', 'Космос', 'Абстракция', 'Минимализм', 'Природа', 'Город'];
 
