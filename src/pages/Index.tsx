@@ -12,52 +12,38 @@ interface Wallpaper {
   image: string;
 }
 
-const wallpapers: Wallpaper[] = [
-  {
-    id: 1,
-    title: 'Abstract Flow',
-    category: 'Абстракция',
-    tags: ['gradient', 'abstract', 'purple', 'blue'],
-    image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/72fbae8b-4b9c-42ec-9adf-d52bdbd249a4.jpg'
-  },
-  {
-    id: 2,
-    title: 'Cosmic Nebula',
-    category: 'Космос',
-    tags: ['space', 'nebula', 'stars', 'cosmic'],
-    image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/bbc96856-910c-45a1-89c6-0209bc7d03e4.jpg'
-  },
-  {
-    id: 3,
-    title: 'Minimal Geometry',
-    category: 'Минимализм',
-    tags: ['minimal', 'geometric', 'neon', 'modern'],
-    image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/62877985-cdf4-4ed0-aa59-f16e426a61ff.jpg'
-  },
-  {
-    id: 4,
-    title: 'Deep Space',
-    category: 'Космос',
-    tags: ['space', 'dark', 'stars', 'galaxy'],
-    image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/bbc96856-910c-45a1-89c6-0209bc7d03e4.jpg'
-  },
-  {
-    id: 5,
-    title: 'Purple Dreams',
-    category: 'Абстракция',
-    tags: ['abstract', 'purple', 'gradient', 'smooth'],
-    image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/72fbae8b-4b9c-42ec-9adf-d52bdbd249a4.jpg'
-  },
-  {
-    id: 6,
-    title: 'Neon Lines',
-    category: 'Минимализм',
-    tags: ['neon', 'lines', 'geometric', 'blue'],
-    image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/62877985-cdf4-4ed0-aa59-f16e426a61ff.jpg'
-  }
-];
+const generateWallpapers = (): Wallpaper[] => {
+  const baseWallpapers = [
+    { title: 'Abstract Flow', category: 'Абстракция', tags: ['gradient', 'abstract', 'purple', 'blue'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/72fbae8b-4b9c-42ec-9adf-d52bdbd249a4.jpg' },
+    { title: 'Cosmic Nebula', category: 'Космос', tags: ['space', 'nebula', 'stars', 'cosmic'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/bbc96856-910c-45a1-89c6-0209bc7d03e4.jpg' },
+    { title: 'Minimal Geometry', category: 'Минимализм', tags: ['minimal', 'geometric', 'neon', 'modern'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/62877985-cdf4-4ed0-aa59-f16e426a61ff.jpg' },
+    { title: 'Mountain Sunset', category: 'Природа', tags: ['mountain', 'sunset', 'landscape', 'nature'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/9192c3e1-bff0-451e-ba1b-b64828a92bff.jpg' },
+    { title: 'Ocean Waves', category: 'Природа', tags: ['ocean', 'water', 'beach', 'tropical'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/2e6fd59a-461a-4bf8-bc90-847b01d11b00.jpg' },
+    { title: 'Forest Path', category: 'Природа', tags: ['forest', 'trees', 'green', 'nature'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/e4b67796-33dc-4225-babb-ca3c79469ed6.jpg' },
+    { title: 'City Lights', category: 'Город', tags: ['city', 'night', 'neon', 'cyberpunk'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/a34921db-238c-42d4-a7d0-44f8ebfb2ad3.jpg' },
+    { title: 'Liquid Gold', category: 'Абстракция', tags: ['liquid', 'gold', 'luxury', 'abstract'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/438dbcfa-92b5-4c79-8161-9a148ca50dea.jpg' },
+    { title: 'Deep Space', category: 'Космос', tags: ['space', 'dark', 'stars', 'galaxy'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/bbc96856-910c-45a1-89c6-0209bc7d03e4.jpg' },
+    { title: 'Purple Dreams', category: 'Абстракция', tags: ['abstract', 'purple', 'gradient', 'smooth'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/72fbae8b-4b9c-42ec-9adf-d52bdbd249a4.jpg' },
+    { title: 'Neon Lines', category: 'Минимализм', tags: ['neon', 'lines', 'geometric', 'blue'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/62877985-cdf4-4ed0-aa59-f16e426a61ff.jpg' },
+  ];
 
-const categories = ['Все', 'Космос', 'Абстракция', 'Минимализм'];
+  const result: Wallpaper[] = [];
+  for (let i = 0; i < 100; i++) {
+    const base = baseWallpapers[i % baseWallpapers.length];
+    result.push({
+      id: i + 1,
+      title: `${base.title} ${Math.floor(i / baseWallpapers.length) + 1}`,
+      category: base.category,
+      tags: base.tags,
+      image: base.image
+    });
+  }
+  return result;
+};
+
+const wallpapers: Wallpaper[] = generateWallpapers();
+
+const categories = ['Все', 'Космос', 'Абстракция', 'Минимализм', 'Природа', 'Город'];
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
