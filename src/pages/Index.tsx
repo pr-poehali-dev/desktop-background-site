@@ -33,23 +33,10 @@ const baseWallpapers = [
   { title: 'Tokyo Streets', category: 'Город', tags: ['tokyo', 'neon', 'rain', 'urban'], image: 'https://cdn.poehali.dev/projects/1da4a4b1-2aba-4836-961b-394a0d225cd3/files/86250acc-6a8b-4fd4-b4e0-f8553b5f85d2.jpg' },
 ];
 
-const generateWallpapers = (count: number): Wallpaper[] => {
-  const result: Wallpaper[] = [];
-  for (let i = 0; i < count; i++) {
-    const base = baseWallpapers[i % baseWallpapers.length];
-    const variation = Math.floor(i / baseWallpapers.length) + 1;
-    result.push({
-      id: i + 1,
-      title: variation > 1 ? `${base.title} ${variation}` : base.title,
-      category: base.category,
-      tags: base.tags,
-      image: base.image
-    });
-  }
-  return result;
-};
-
-const wallpapers: Wallpaper[] = generateWallpapers(100);
+const wallpapers: Wallpaper[] = baseWallpapers.map((wallpaper, index) => ({
+  id: index + 1,
+  ...wallpaper
+}));
 
 const categories = ['Все', 'Космос', 'Абстракция', 'Минимализм', 'Природа', 'Город'];
 
